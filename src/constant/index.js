@@ -140,3 +140,38 @@ export const offers = [
     previousPrice: '3000',
   },
 ];
+
+export const departments = [
+  {
+    image: images.offer,
+    title: 'الجراحة العامة',
+  },
+  {
+    image: images.offer,
+    title: 'الجراحة العامة',
+  },
+  {
+    image: images.offer,
+    title: 'الجراحة العامة',
+  },
+  {
+    image: images.offer,
+    title: 'الجراحة العامة',
+  },
+  {
+    image: images.offer,
+    title: 'الجراحة العامة',
+  },
+  {
+    image: images.offer,
+    title: 'الجراحة العامة',
+  },
+  {
+    image: images.offer,
+    title: 'الجراحة العامة',
+  },
+  {
+    image: images.offer,
+    title: 'الجراحة العامة',
+  },
+];
