@@ -3,11 +3,30 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Bahij";
-  src: url("assets/fonts/Bahij_TheSansArabic-Bold.ttf") format("truetype"),
-    url("assets/fonts/Bahij_TheSansArabic-Plain.ttf") format("truetype");
-  font-weight: normal;
+  font-family: "PNU";
+  src: url("assets/fonts/ArbFONTS-PNU-Light.ttf") format("truetype");
   font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "PNU";
+  src: url("assets/fonts/ArbFONTS-PNU-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PNU";
+  src: url("assets/fonts/ArbFONTS-PNU-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "PNU";
+  src: url("assets/fonts/ArbFONTS-PNU-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700;
 }
 
 :root {
@@ -18,13 +37,16 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Bahij";
+  font-family: "PNU";
+
+  font-style: normal;
   box-sizing: border-box;
 }
 
 .container {
   max-width: 1220px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   padding: 0 15px;
   height: 100%;
 }
@@ -77,6 +99,86 @@ body {
   left: -5px;
 }
 
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 15% !important;
+  right: 0 !important;
+  left: auto !important;
+  text-align: start;
+  padding: 0 50px;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 15px !important;
+  width: 11px;
+  height: 11px;
+  background-color: transparent;
+  opacity: 1;
+  border: white 1px solid;
+}
+.swiper-pagination-bullet-active {
+  background-color: white !important;
+  box-shadow: 0 0 10px 2px white;
+}
+.swiper-slider-home-page::after {
+  content: "sss";
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  background: rgb(112, 147, 196);
+  background: linear-gradient(
+    90deg,
+    rgba(112, 147, 196, 0) 0%,
+    rgba(21, 37, 75, 1) 100%
+  );
+  z-index: -1;
+}
+
+.swiper-slider-home-page .line {
+  width: 165px;
+  height: 12px;
+  background: url("../src/assets/icons/line.svg");
+  border-radius: 10% 70% 70% 10% / 90% 10% 10% 90%;
+}
+.popup-slider {
+  transition: 0.3s ease-out;
+  position: relative;
+  transition: 0.3s ease-out;
+}
+.popup-slider::after {
+  border-right: 3px solid rgba(0, 0, 255, 0);
+  border-bottom: 3px solid transparent;
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  border-top: 3px solid transparent;
+  border-left: 3px solid transparent;
+
+  border-radius: 7px;
+  rotate: 225deg;
+  transition: 0.3s;
+}
+.popup-slider:hover {
+  background-color: var(--secondary-color);
+  margin-bottom: 40px;
+}
+.popup-slider:hover > div > .mr-[auto] {
+  position: relative;
+  left: 10px;
+}
+.popup-slider:hover:after {
+  bottom: -10px;
+  left: 10px;
+  border-top: 10px solid var(--secondary-color);
+  border-left: 10px solid var(--secondary-color);
+  border-right: 10px solid rgba(0, 0, 255, 0);
+  border-bottom: 10px solid transparent;
+}
+
 @media (max-width: 991px) {
   .menu-icon {
     display: block;
@@ -88,6 +190,7 @@ body {
   }
 
   .nav-elements {
+    z-index: 2000000;
     position: absolute;
     right: 0;
     top: 100px;
