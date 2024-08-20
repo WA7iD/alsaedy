@@ -12,6 +12,8 @@ import googlePlay from '../assets/googleplay.png';
 import phone from '../assets/phone.png';
 import landing from '../assets/landing.png';
 import landingOvellay from '../assets/landingovellay.png';
+import error from '../assets/404.png';
+import doctor from '../assets/doctor.png';
 
 export const images = {
   doctorimage,
@@ -23,6 +25,8 @@ export const images = {
   phone,
   landing,
   landingOvellay,
+  error,
+  doctor,
 };
 export const icons = { calender, leftArrow, logoWhite };
 
@@ -173,5 +177,13 @@ export const departments = [
   {
     image: images.offer,
     title: 'الجراحة العامة',
+  },
+];
+
+export const doctorsPage = [
+  {
+    image: images.doctor,
+    title: 'د. نواف عبدالإله بن سليم ',
+    description: `Lorem Ipsumد. نواف بن سليم، استشاري طوارئ أطفال بالمستشفى السعودي الألماني، الرياض.`,
   },
 ];

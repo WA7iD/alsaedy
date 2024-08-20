@@ -1,14 +1,16 @@
-import React, { Suspense, lazy, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, { Suspense, lazy, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Loader from "./shared/Loader";
-import AppLayout from "./shared/layout/AppLayout";
-import Aos from "aos";
+import Loader from './shared/Loader';
+import AppLayout from './shared/layout/AppLayout';
+import Aos from 'aos';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
 const OffersPage = lazy(() => import('./pages/OffersPage'));
 const AskOffer = lazy(() => import('./pages/AskOffer'));
 const Department = lazy(() => import('./pages/DepartmentPage'));
+const Employment = lazy(() => import('./pages/EmploymentPage'));
+const DoctorsPage = lazy(() => import('./pages/DoctorsPage'));
 const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 
 function App() {
@@ -23,7 +25,9 @@ function App() {
             <Route path='/' element={<HomePage />} />
             <Route path='/offers' element={<OffersPage />} />
             <Route path='/askOffer' element={<AskOffer />} />
-            <Route path='/department' element={<Department />} />
+            <Route path='/departments' element={<Department />} />
+            <Route path='/employment' element={<Employment />} />
+            <Route path='/doctors' element={<DoctorsPage />} />
             <Route path='*' element={<PageNotFound />} />
           </Route>
         </Routes>
