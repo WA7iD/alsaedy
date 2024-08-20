@@ -14,6 +14,8 @@ export default function SliderHome() {
     >
       <div className="absolute hidden lg:block z-10 left-[40px] top-[50%] translate-y-[-50%]">
         <Link
+          data-aos="fade-up"
+          data-aos-delay="100"
           to={"https://www.google.com"}
           className="popup-slider text-white font-medium flex gap-3 rounded-[4px] bg-[#516d9ed8] px-[25px] py-[25px]"
         >
@@ -28,6 +30,8 @@ export default function SliderHome() {
           </div>
         </Link>
         <Link
+          data-aos="fade-up"
+          data-aos-delay="300"
           to={"https://www.google.com"}
           className="popup-slider my-[16px] text-white font-medium flex gap-3 rounded-[4px] bg-[#516d9ed8] px-[25px] py-[25px]"
         >
@@ -36,12 +40,14 @@ export default function SliderHome() {
           </div>
 
           <div>
-            <h1 className="flex gap-2 text-[18px]">الرعاية في المستشفي</h1>
-            <p>احجز موعدا</p>
+            <h1 className="flex gap-2 text-[18px]"> تحميل التطبيق </h1>
+            <p> حمل التطبيق</p>
             <img className="mr-[auto] mt-[20px]" src={arrow} alt="" />
           </div>
         </Link>
         <Link
+          data-aos="fade-up"
+          data-aos-delay="500"
           to={"https://www.google.com"}
           className="popup-slider text-white font-medium flex gap-3 rounded-[4px] bg-[#516d9ed8] px-[25px] py-[25px]"
         >
@@ -50,8 +56,8 @@ export default function SliderHome() {
           </div>
 
           <div>
-            <h1 className="flex gap-2 text-[18px]">الرعاية في المستشفي</h1>
-            <p>احجز موعدا</p>
+            <h1 className="flex gap-2 text-[18px]"> لحمة عن المستشفي</h1>
+            <p> لحمة عنا</p>
             <img className="mr-[auto] mt-[20px]" src={arrow} alt="" />
           </div>
         </Link>
