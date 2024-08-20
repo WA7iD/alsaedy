@@ -5,8 +5,11 @@ import Loader from "./shared/Loader";
 import AppLayout from "./shared/layout/AppLayout";
 import Aos from "aos";
 
-const HomePage = lazy(() => import("./pages/HomePage"));
-const PageNotFound = lazy(() => import("./pages/PageNotFound"));
+const HomePage = lazy(() => import('./pages/HomePage'));
+const OffersPage = lazy(() => import('./pages/OffersPage'));
+const AskOffer = lazy(() => import('./pages/AskOffer'));
+const Department = lazy(() => import('./pages/DepartmentPage'));
+const PageNotFound = lazy(() => import('./pages/PageNotFound'));
 
 function App() {
   useEffect(() => {
@@ -16,9 +19,12 @@ function App() {
     <BrowserRouter>
       <Suspense fallback={<Loader />}>
         <Routes>
-          <Route path="/" element={<AppLayout />}>
-            <Route path="/" element={<HomePage />} />
-            <Route path="*" element={<PageNotFound />} />
+          <Route path='/' element={<AppLayout />}>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/offers' element={<OffersPage />} />
+            <Route path='/askOffer' element={<AskOffer />} />
+            <Route path='/department' element={<Department />} />
+            <Route path='*' element={<PageNotFound />} />
           </Route>
         </Routes>
       </Suspense>

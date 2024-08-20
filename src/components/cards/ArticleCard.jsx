@@ -3,7 +3,7 @@ import { icons } from '../../constant';
 
 function ArticleCard({ image, title, day, description, month, key }) {
   return (
-    <div key={key} className='flex justify-between items-start gap-4'>
+    <div key={key} className='flex justify-between items-start gap-4 max-w-fit'>
       <div className='w-full'>
         <img src={image} alt='cover' className='w-full' />
       </div>

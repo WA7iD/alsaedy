@@ -3,28 +3,28 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "PNU";
-  src: url("assets/fonts/ArbFONTS-PNU-Light.ttf") format("truetype");
+  font-family: 'PNU';
+  src: url('assets/fonts/ArbFONTS-PNU-Light.ttf') format('truetype');
   font-style: normal;
   font-weight: 300;
 }
 
 @font-face {
-  font-family: "PNU";
-  src: url("assets/fonts/ArbFONTS-PNU-Regular.ttf") format("truetype");
+  font-family: 'PNU';
+  src: url('assets/fonts/ArbFONTS-PNU-Regular.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
-  font-family: "PNU";
-  src: url("assets/fonts/ArbFONTS-PNU-Medium.ttf") format("truetype");
+  font-family: 'PNU';
+  src: url('assets/fonts/ArbFONTS-PNU-Medium.ttf') format('truetype');
   font-style: normal;
   font-weight: 500;
 }
 
 @font-face {
-  font-family: "PNU";
-  src: url("assets/fonts/ArbFONTS-PNU-Bold.ttf") format("truetype");
+  font-family: 'PNU';
+  src: url('assets/fonts/ArbFONTS-PNU-Bold.ttf') format('truetype');
   font-style: normal;
   font-weight: 700;
 }
@@ -32,12 +32,13 @@
 :root {
   --main-color: #15254b;
   --secondary-color: #ed1c24;
+  --input-border-color: #15254b33;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: "PNU";
+  font-family: 'PNU';
 
   font-style: normal;
   box-sizing: border-box;
@@ -122,7 +123,7 @@ body {
   box-shadow: 0 0 10px 2px white;
 }
 .swiper-slider-home-page::after {
-  content: "sss";
+  content: 'sss';
   top: 0;
   right: 0;
   width: 80%;
@@ -140,7 +141,7 @@ body {
 .swiper-slider-home-page .line {
   width: 165px;
   height: 12px;
-  background: url("../src/assets/icons/line.svg");
+  background: url('../src/assets/icons/line.svg');
   border-radius: 10% 70% 70% 10% / 90% 10% 10% 90%;
 }
 .popup-slider {
@@ -151,7 +152,7 @@ body {
 .popup-slider::after {
   border-right: 3px solid rgba(0, 0, 255, 0);
   border-bottom: 3px solid transparent;
-  content: "";
+  content: '';
   position: absolute;
   bottom: 10px;
   left: 20px;
@@ -247,7 +248,7 @@ body {
 }
 
 .section-header h1::after {
-  content: "";
+  content: '';
   height: 20px;
   width: 100%;
   background-color: transparent;
@@ -265,4 +266,65 @@ body {
 }
 .section-header.light p {
   color: white;
+}
+/* inputs */
+.input-holder {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  height: fit-content;
+  position: relative;
+  label {
+    font-size: 16px;
+    color: var(--text-main-color);
+    font-weight: 400;
+    margin-bottom: 10px;
+    transition: 0.3s;
+  }
+  input,
+  textarea,
+  select {
+    all: unset;
+    border-radius: 5px;
+    color: var(--text-main-color);
+    font-size: 16px;
+    padding: 10px 12px;
+    border: 1px solid var(--input-border-color);
+    background: var(--table-row-color);
+    transition: 0.3s;
+  }
+  input[name='image'] {
+    display: none;
+  }
+
+  input[name='image'] + label {
+    border-radius: 5px;
+    border: 2px solid rgba(15, 98, 254, 0);
+    padding: 5px 35px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+    background: var(--btn-color);
+  }
+  .img-holder {
+    width: 197px;
+    height: 197px;
+    overflow: hidden;
+    margin: 15px auto;
+    border-radius: 50%;
+    img {
+      width: 100%;
+      min-height: 100%;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    left: 20px;
+    bottom: 8px;
+  }
 }
