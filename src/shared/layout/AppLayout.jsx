@@ -7,7 +7,7 @@ function AppLayout({ children }) {
   return (
     <div dir={"rtl"}>
       <Header />
-      <div className="flex flex-col w-full bg-blue-500">
+      <div className="flex flex-col w-full">
         <Outlet />
       </div>
       <Footer />
