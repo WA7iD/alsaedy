@@ -7,7 +7,7 @@ import map from '../../assets/map.png';
 export default function Footer() {
   return (
     <footer className='overflow-hidden bg-primary relative h-1/2'>
-      <img src={map} alt='map' className='absolute top-0 left-0 w-full' />
+      <img src={map} alt='map' className='absolute bottom-0 left-0 w-full ' />
       <div className='pt-10 '>
         <div className='container'>
           <div className=''>

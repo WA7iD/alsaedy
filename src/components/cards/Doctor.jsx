@@ -9,9 +9,9 @@ function Doctor({ image, title, description, key }) {
       </div>
       <div className='p-6'>
         <h1 className='text-2xl text-primary my-4'> {title}</h1>
-        <p className='text-primary/40 w-1/2 my-4'> {description}</p>
+        <p className='text-primary/40 my-4'> {description}</p>
 
-        <Link className='border-2 border-secondary text-secondary rounded-2xl p-4 flex items-center gap-2'>
+        <Link className='border-2 border-secondary text-secondary rounded-full px-4 py-3 flex items-center gap-2 w-fit'>
           طلب العرض
           <FaArrowLeft />
         </Link>
