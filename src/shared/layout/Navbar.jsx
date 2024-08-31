@@ -23,7 +23,7 @@ const navLinks = [
   },
   {
     name: 'مقالات طبية',
-    href: '/articals',
+    href: '/articles',
   },
   {
     name: 'العروض',
@@ -62,7 +62,10 @@ const Navbar = () => {
                 </NavLink>
               </li>
             ))}
-            <Link className='nav-btn flex items-center gap-2'>
+            <Link
+              to={'/bookingPage'}
+              className='nav-btn flex items-center gap-2'
+            >
               احجز موعدًا
               <img src={arrow} alt='' />
             </Link>

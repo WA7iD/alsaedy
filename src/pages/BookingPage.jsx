@@ -1,10 +1,10 @@
 import React from 'react';
 import PageHeader from '../shared/PageHeader';
 
-function AskOffer() {
+const BookingPage = () => {
   return (
     <div className='container mb-20'>
-      <PageHeader pageName={'طلب عرض'} />
+      <PageHeader pageName={' احجز الان'} />
       <div className='bg-[#F5F5F5] p-5 rounded-3xl flex flex-col justify-center items-center py-14'>
         <div className='flex flex-col justify-center items-center gap-4 mb-14'>
           <h1 className='text-3xl font-bold text-primary'>
@@ -45,7 +45,34 @@ function AskOffer() {
             />
           </div>
           <div className='input-holder col-md-6 col-12'>
-            <label htmlFor=''>اختر الخدمة</label>
+            <label htmlFor=''>الفرع</label>
+            <input
+              placeholder='enter your service'
+              type='text'
+              name='family_name'
+              // onChange={handleInputChange}
+            />
+          </div>
+          <div className='input-holder col-md-6 col-12'>
+            <label htmlFor=''>العيادة</label>
+            <input
+              placeholder='enter your service'
+              type='text'
+              name='family_name'
+              // onChange={handleInputChange}
+            />
+          </div>
+          <div className='input-holder col-md-6 col-12'>
+            <label htmlFor=''>الدكتور</label>
+            <input
+              placeholder='enter your service'
+              type='text'
+              name='family_name'
+              // onChange={handleInputChange}
+            />
+          </div>
+          <div className='input-holder col-md-6 col-12'>
+            <label htmlFor=''>الرسالة</label>
             <input
               placeholder='enter your service'
               type='text'
@@ -58,10 +85,8 @@ function AskOffer() {
           </button>
         </form>
       </div>
-      
     </div>
   );
-}
+};
 
-export default AskOffer;
-
+export default BookingPage;

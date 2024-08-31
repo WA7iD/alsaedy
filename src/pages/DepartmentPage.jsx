@@ -2,6 +2,7 @@ import PageHeader from '../shared/PageHeader';
 import { departments } from '../constant';
 import DepartmentCard from '../components/cards/DepartmentCard';
 import SectionHeader from '../shared/SectionHeader';
+import DownloadApp from '../components/Home/DownloadApp';
 
 function DepartmentPage() {
   return (
@@ -17,6 +18,7 @@ function DepartmentPage() {
           <DepartmentCard key={index} {...department} />
         ))}
       </div>
+      <DownloadApp />
     </div>
   );
 }

@@ -2,6 +2,7 @@ import PageHeader from '../shared/PageHeader';
 import { offers } from '../constant';
 import OfferCard from '../components/cards/OfferCard';
 import SectionHeader from '../shared/SectionHeader';
+import DownloadApp from '../components/Home/DownloadApp';
 
 function OffersPage() {
   return (
@@ -15,6 +16,7 @@ function OffersPage() {
           ))}
         </div>
       </div>
+      <DownloadApp />
     </div>
   );
 }

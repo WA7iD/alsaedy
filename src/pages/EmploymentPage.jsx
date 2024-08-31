@@ -1,3 +1,5 @@
+import DownloadApp from "../components/Home/DownloadApp";
+
 const EmploymentPage = () => {
   return (
     <div className='container'>
@@ -61,6 +63,7 @@ const EmploymentPage = () => {
           </button>
         </form>
       </div>
+      <DownloadApp />
     </div>
   );
 };

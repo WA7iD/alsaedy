@@ -15,6 +15,8 @@ import landingOvellay from '../assets/landingovellay.png';
 import error from '../assets/404.png';
 import doctor from '../assets/doctor.png';
 
+import activiteImg from '../assets/dummy/activity.png';
+
 export const images = {
   doctorimage,
   article,
@@ -27,6 +29,7 @@ export const images = {
   landingOvellay,
   error,
   doctor,
+  activiteImg,
 };
 export const icons = { calender, leftArrow, logoWhite };
 
@@ -210,5 +213,44 @@ export const doctorsPage = [
     image: images.doctor,
     title: 'د. نواف عبدالإله بن سليم ',
     description: `Lorem Ipsumد. نواف بن سليم، استشاري طوارئ أطفال بالمستشفى السعودي الألماني، الرياض.`,
+  },
+];
+
+export const activite = [
+  {
+    header: 'عنوان الفاعلية',
+    content:
+      ' نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
+    img: activiteImg,
+    date: '2022-3-3',
+    href: activiteImg,
+    light: true,
+  },
+  {
+    header: 'عنوان الفاعلية',
+    content:
+      'نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
+    img: activiteImg,
+    date: '2023-3-4',
+    href: '',
+    light: true,
+  },
+  {
+    header: 'عنوان الفاعلية',
+    content:
+      ' نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
+    img: activiteImg,
+    date: '2022-3-3',
+    href: activiteImg,
+    light: true,
+  },
+  {
+    header: 'عنوان الفاعلية',
+    content:
+      'نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
+    img: activiteImg,
+    date: '2023-3-4',
+    href: '',
+    light: true,
   },
 ];

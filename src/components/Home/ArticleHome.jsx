@@ -12,12 +12,14 @@ function ArticleHome() {
           ))}
         </div>
 
-        <Link
-          to='/articles'
-          className='bg-secondary text-white p-4 rounded-full font-bold '
-        >
-          تصفح جميع المقالات
-        </Link>
+        <div className='justify-center items-center flex mt-10'>
+          <Link
+            to='/articles'
+            className='bg-secondary text-white p-4 rounded-full font-bold'
+          >
+            تصفح جميع المقالات
+          </Link>
+        </div>
       </div>
     </div>
   );

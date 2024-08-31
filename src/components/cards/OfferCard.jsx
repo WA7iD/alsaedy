@@ -19,7 +19,10 @@ function OfferCard({ image, title, description, price, previousPrice, key }) {
               {previousPrice} ريال سعودي
             </p>
           </div>
-          <Link className='border-2 border-secondary text-secondary rounded-2xl p-4 flex items-center gap-2'>
+          <Link
+            to={'/askOffer'}
+            className='border-2 border-secondary text-secondary rounded-2xl p-4 flex items-center gap-2'
+          >
             طلب العرض
             <FaArrowLeft />
           </Link>

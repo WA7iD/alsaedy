@@ -1,3 +1,4 @@
+import DownloadApp from '../components/Home/DownloadApp';
 import PageHeader from '../shared/PageHeader';
 
 const DepartmentDetails = () => {
@@ -42,7 +43,8 @@ const DepartmentDetails = () => {
           سبيل المثال او نماذج مواقع انترنت لوريم ايبسوم هو نموذج افتراضي يوضع
           في التصاميم لتعرض على العميل ليتصور طريقه{' '}
         </p>
-      </div>
+          </div>
+          <DownloadApp />
     </section>
   );
 };

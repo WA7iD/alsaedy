@@ -1,6 +1,7 @@
 import { doctorsPage } from '../constant';
 import Doctor from '../components/cards/Doctor';
 import PageHeader from '../shared/PageHeader';
+import DownloadApp from '../components/Home/DownloadApp';
 
 function DoctorsPage() {
   return (
@@ -13,6 +14,7 @@ function DoctorsPage() {
           ))}
         </div>
       </div>
+      <DownloadApp />
     </div>
   );
 }
