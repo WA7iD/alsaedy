@@ -12,7 +12,7 @@ function DepartmentCard({ title, image, key }) {
       <div className='flex justify-between items-center my-5'>
         <p className='text-secondary text-xl mb-2'> {title} </p>
 
-        <Link className='border-2 border-secondary text-secondary rounded-2xl p-4 flex items-center gap-2'>
+        <Link to={'/DepartmentDetails'} className='border-2 border-secondary text-secondary rounded-2xl p-4 flex items-center gap-2'>
           طلب العرض
           <FaArrowLeft />
         </Link>
