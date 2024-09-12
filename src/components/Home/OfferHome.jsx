@@ -13,6 +13,20 @@ function OfferHome() {
             clickable: true,
             enabled: true,
           }}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+            },
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 3,
+            },
+          }}
         >
           {offers.map((offer, index) => (
             <SwiperSlide key={index}>

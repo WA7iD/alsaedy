@@ -35,15 +35,18 @@ export default function ActivitesHome() {
           title={'سنعرض لكم اخبار مستشفي الصاعدي'}
           light={true}
         />
-        <div className='flex justify-center gap-10'>
+        <div className='flex flex-col md:flex-row justify-center gap-10'>
           {data?.map((e, i) => (
-            <div className='w-full md:w-[45%]'>
+            <div className='w-full md:w-[45%]' key={i}>
               <ActivitesCard key={i} {...e} />
             </div>
           ))}
         </div>
 
-        <Link className='nav-btn mx-auto mt-[40px] flex w-fit items-center gap-2'>
+        <Link
+          to={'activites'}
+          className='nav-btn mx-auto mt-[40px] flex w-fit items-center gap-2'
+        >
           عرض جميع الفعاليات <img src={arrow} alt='' />
         </Link>
       </div>

@@ -13,13 +13,9 @@ const ActivitesPage = () => {
       />
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10 py-20'>
         {activite?.map((e, i) => (
-          <Link
-            to={'/activiteDetails'}
-            key={i}
-            className=' bg-[#15254b7a] rounded-xl'
-          >
+          <div key={i} className=' bg-[#15254b7a] rounded-xl'>
             <ActivitesCard key={i} {...e} light={false} />
-          </Link>
+          </div>
         ))}
       </div>
     </section>

@@ -51,6 +51,9 @@ const Navbar = () => {
           <img src={Hamburger} alt='' />
         </div>
         <div className={`nav-elements  ${showNavbar && 'active'}`}>
+          <div className='menu-icon flex w-full' onClick={handleShowNavbar}>
+            <img src={Hamburger} alt='' className='items-end' />
+          </div>
           <ul>
             {navLinks?.map((link, i) => (
               <li className='flex items-center' key={i}>

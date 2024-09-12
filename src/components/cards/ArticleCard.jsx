@@ -7,6 +7,7 @@ function ArticleCard({ image, title, day, description, month, key, pagecard }) {
     <>
       {pagecard ? (
         <Link
+          to={`/articleDetails`}
           key={key}
           className='flex flex-col justify-between items-center gap-4'
         >
@@ -26,7 +27,7 @@ function ArticleCard({ image, title, day, description, month, key, pagecard }) {
       ) : (
         <div
           key={key}
-          className='flex justify-between items-start gap-4 max-w-fit'
+          className='flex flex-col md:flex-row justify-between items-start gap-4 w-full md:w-9/12 border-t-[.2px] border-b-[.2px] border-[#D9D9D9] p-4'
         >
           <div className='w-full'>
             <img src={image} alt='cover' className='w-full' />
@@ -39,7 +40,7 @@ function ArticleCard({ image, title, day, description, month, key, pagecard }) {
             </div>
             <div>
               <h2 className='text-2xl text-primary mb-4'>{title} </h2>
-              <p className='text-primary w-1/2'>{description}</p>
+              <p className='text-primary '>{description}</p>
             </div>
           </div>
         </div>
