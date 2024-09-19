@@ -7,8 +7,7 @@ import map from '../../assets/map.png';
 export default function Footer() {
   return (
     <footer className='overflow-hidden bg-primary relative h-1/2'>
-      <img src={map} alt='map' className='absolute bottom-0 left-0 w-full ' />
-      <div className='pt-10 '>
+      <div className='pt-10 z-10 relative'>
         <div className='container'>
           <div className=''>
             <div className='grid grid-cols-12 justify-between items-start lg:justify-items-center  gap-10  md:gap-8 lg:gap-28 py-20'>
@@ -31,7 +30,7 @@ export default function Footer() {
                   </h2>
                   <ul className='flex flex-col gap-2'>
                     <li className='text-white font-light text-xl p-3  '>
-                      <Link to='/'>الطاقم الطبي</Link>
+                      <Link to='/doctors'>الطاقم الطبي</Link>
                     </li>
                     <li className='text-white font-light text-xl p-3  '>
                       <Link to='/about'>العروض</Link>
@@ -46,6 +45,11 @@ export default function Footer() {
           2024© مستشفى الصاعدي- الرياض. جميع الحقوق محفوظة.
         </p>
       </div>
+      <img
+        src={map}
+        alt='map'
+        className='absolute bottom-0 left-0 w-full h-full object-cover z-0'
+      />
     </footer>
   );
 }

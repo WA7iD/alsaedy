@@ -1,8 +1,11 @@
 import { offers } from '../../constant';
+import useGetData from '../../Hooks/useGetData';
 import OfferCard from '../cards/OfferCard';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 function OfferHome() {
+  const { data, loading, error } = useGetData('/offers');
+
   return (
     <div className='py-20'>
       <div className='container'>

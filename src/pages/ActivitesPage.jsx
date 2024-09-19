@@ -3,7 +3,10 @@ import ActivitesCard from '../components/cards/ActivitesCard';
 import { activite } from '../constant';
 import SectionHeader from '../shared/SectionHeader';
 import { Link } from 'react-router-dom';
+import useGetData from '../Hooks/useGetData';
 const ActivitesPage = () => {
+  const { data, loading, error } = useGetData('/activites');
+
   return (
     <section className='container'>
       <PageHeader pageName={'الفعاليات'} />

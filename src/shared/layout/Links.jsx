@@ -9,17 +9,17 @@ const Links = () => {
         روابط مهمه
       </h2>
       <ul className='flex flex-col gap-2 '>
-        <li className='text-white font-light text-xl p-3  '>
+        <li className='text-white font-light text-xl p-3 cursor-pointer '>
           <Link to='/'>الرئيسية</Link>
         </li>
-        <li className='text-white font-light text-xl p-3  '>
-          <Link to='/about'>الأقسام</Link>
+        <li className='text-white font-light text-xl p-3 cursor-pointer '>
+          <Link to='/departments'>الأقسام</Link>
         </li>
-        <li className='text-white font-light text-xl p-3  '>
-          <Link to='/services'>المقالات </Link>
+        <li className='text-white font-light text-xl p-3 cursor-pointer '>
+          <Link to='/articles'>المقالات </Link>
         </li>
-        <li className='text-white font-light text-xl p-3  '>
-          <Link to='/faqs'>الفعاليات</Link>
+        <li className='text-white font-light text-xl p-3 cursor-pointer '>
+          <Link to='/activites'>الفعاليات</Link>
         </li>
       </ul>
     </div>

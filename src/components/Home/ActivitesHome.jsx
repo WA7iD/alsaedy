@@ -5,6 +5,7 @@ import activiteImg from '../../assets/dummy/activity.png';
 import arrow from '../../assets/icons/left-arrow.svg';
 
 import { Link } from 'react-router-dom';
+import useGetData from '../../Hooks/useGetData';
 const data = [
   {
     header: 'عنوان الفاعلية',
@@ -27,6 +28,7 @@ const data = [
 ];
 
 export default function ActivitesHome() {
+  const { data, loading, error } = useGetData("/activites");
   return (
     <section style={{ padding: '0' }} className='container mb-[80px]'>
       <div className=' py-[60px] px-[30px] relative  overflow-hidden mt-[40px] rounded-[40px] bg-primary'>

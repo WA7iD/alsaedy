@@ -3,8 +3,11 @@ import { departments } from '../constant';
 import DepartmentCard from '../components/cards/DepartmentCard';
 import SectionHeader from '../shared/SectionHeader';
 import DownloadApp from '../components/Home/DownloadApp';
+import useGetData from '../Hooks/useGetData';
 
 function DepartmentPage() {
+  const { data, loading, error } = useGetData('/departments');
+
   return (
     <div className='container'>
       <PageHeader pageName={'الاقسام'} />

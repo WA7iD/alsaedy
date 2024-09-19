@@ -4,8 +4,11 @@ import SectionHeader from '../shared/SectionHeader';
 import ArticleCard from '../components/cards/ArticleCard';
 import { articles } from '../constant';
 import DownloadApp from '../components/Home/DownloadApp';
+import useGetData from '../Hooks/useGetData';
 
 const ArticlesPage = () => {
+  const { data, loading, error } = useGetData('/articles');
+
   return (
     <section className='container'>
       <PageHeader pageName={'المقالات'} />

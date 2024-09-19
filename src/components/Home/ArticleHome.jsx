@@ -1,8 +1,11 @@
 import ArticleCard from '../cards/ArticleCard';
 import { articles } from '../../constant';
 import { Link } from 'react-router-dom';
+import useGetData from '../../Hooks/useGetData';
 
 function ArticleHome() {
+  const { data, loading, error } = useGetData('/articles');
+
   return (
     <div className='py-20'>
       <div className='container'>

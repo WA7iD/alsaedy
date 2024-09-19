@@ -1,6 +1,7 @@
 import DownloadApp from "../components/Home/DownloadApp";
 
 const EmploymentPage = () => {
+
   return (
     <div className='container'>
       <div className='bg-[#F5F5F5] p-5 rounded-3xl flex flex-col justify-center items-center py-14'>

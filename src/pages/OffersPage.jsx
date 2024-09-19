@@ -3,8 +3,11 @@ import { offers } from '../constant';
 import OfferCard from '../components/cards/OfferCard';
 import SectionHeader from '../shared/SectionHeader';
 import DownloadApp from '../components/Home/DownloadApp';
+import useGetData from '../Hooks/useGetData';
 
 function OffersPage() {
+  const { data, loading, error } = useGetData('/offers');
+
   return (
     <div>
       <div className='container'>
