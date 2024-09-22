@@ -4,13 +4,13 @@ import { Link } from 'react-router-dom';
 import useGetData from '../../Hooks/useGetData';
 
 function ArticleHome() {
-  const { data, loading, error } = useGetData('/articles');
-
+  const { data, loading, error } = useGetData('/blogs');
+  console.log(data);
   return (
     <div className='py-20'>
       <div className='container'>
         <div className='flex flex-col justify-between items-center gap-10'>
-          {articles.map((article, index) => (
+          {data?.data?.data?.map((article, index) => (
             <ArticleCard key={index} {...article} />
           ))}
         </div>

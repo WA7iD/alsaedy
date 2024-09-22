@@ -2,8 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 export default function ActivitesCard({
-  header,
-  content,
+  title,
+  description,
   img,
   date,
   href,
@@ -19,9 +19,9 @@ export default function ActivitesCard({
           light ? 'text-white' : 'text-primary'
         }`}
       >
-        <h1 className='font-bold text-[18px]'>{header}</h1>
+        <h1 className='font-bold text-[18px]'>{title}</h1>
         <p className='font-regular my-1 w-full md:w-[90%] text-[14px]'>
-          {content}
+          {description}
         </p>
         <p className='text-secondary  font-bold text-[16px]'>{date}</p>
         <div className='w-[30px] mt-4'>

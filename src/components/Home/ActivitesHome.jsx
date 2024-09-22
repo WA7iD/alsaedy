@@ -6,29 +6,11 @@ import arrow from '../../assets/icons/left-arrow.svg';
 
 import { Link } from 'react-router-dom';
 import useGetData from '../../Hooks/useGetData';
-const data = [
-  {
-    header: 'عنوان الفاعلية',
-    content:
-      ' نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
-    img: activiteImg,
-    date: '2022-3-3',
-    href: activiteImg,
-    light: true,
-  },
-  {
-    header: 'عنوان الفاعلية',
-    content:
-      'نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
-    img: activiteImg,
-    date: '2023-3-4',
-    href: '',
-    light: true,
-  },
-];
+import { activite } from '../../constant';
 
 export default function ActivitesHome() {
-  const { data, loading, error } = useGetData("/activites");
+  const { data, loading, error } = useGetData('/activities');
+  console.log(data);
   return (
     <section style={{ padding: '0' }} className='container mb-[80px]'>
       <div className=' py-[60px] px-[30px] relative  overflow-hidden mt-[40px] rounded-[40px] bg-primary'>
@@ -38,7 +20,7 @@ export default function ActivitesHome() {
           light={true}
         />
         <div className='flex flex-col md:flex-row justify-center gap-10'>
-          {data?.map((e, i) => (
+          {activite.map((e, i) => (
             <div className='w-full md:w-[45%]' key={i}>
               <ActivitesCard key={i} {...e} />
             </div>

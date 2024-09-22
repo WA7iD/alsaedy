@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 function OfferHome() {
   const { data, loading, error } = useGetData('/offers');
+  console.log(data);
 
   return (
     <div className='py-20'>
@@ -31,7 +32,7 @@ function OfferHome() {
             },
           }}
         >
-          {offers.map((offer, index) => (
+          {data?.data?.data?.map((offer, index) => (
             <SwiperSlide key={index}>
               <OfferCard key={index} {...offer} />
             </SwiperSlide>

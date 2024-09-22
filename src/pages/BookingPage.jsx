@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PageHeader from '../shared/PageHeader';
+import usePostData from '../Hooks/usePostData';
 
 const BookingPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    possition: '',
+    message: '',
+    clinic: '',
+  });
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    const result = await postWithoutImage(formData);
+    console.log(result);
+  };
+  const { response, error, loading, postWithoutImage } = usePostData(
+    '/employment_applications'
+  );
   return (
     <div className='container mb-20'>
       <PageHeader pageName={' احجز الان'} />
@@ -15,74 +39,87 @@ const BookingPage = () => {
             الأمنة
           </p>
         </div>
-        <form action='' className=' w-1/2'>
+        <form action='' className=' w-1/2' onSubmit={handleSubmit}>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>الاسم</label>
             <input
               className='border-2 border-[#15254B33] rounded-md p-2'
-              placeholder='enter your name'
+              placeholder='ادخل اسم المستخدم'
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
+              name='name'
+              onChange={handleInputChange}
             />
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>البريد الالكتروني</label>
             <input
-              placeholder='enter your email'
+              placeholder='ادخل البريد الالكتروني  '
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
+              name='email'
+              onChange={handleInputChange}
             />
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>رقم الجوال</label>
             <input
-              placeholder='enter your phone'
+              placeholder='ادخل رقم الجوال'
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
+              name='phone'
+              onChange={handleInputChange}
             />
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>الفرع</label>
-            <input
-              placeholder='enter your service'
+            <select
+              placeholder='اختر الفرع  '
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
-            />
+              name='possition'
+              value={formData.position}
+              onChange={handleInputChange}
+            >
+              <option value=''>اختر الفرع </option>
+              <option value='manager'>الفرع الاول</option>
+              <option value='developer'>الفرع الثاني</option>
+              <option value='designer'>الفرع الثالث</option>
+            </select>
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>العيادة</label>
             <input
-              placeholder='enter your service'
+              placeholder='اختر العياده  '
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
+              name='clinic'
+              onChange={handleInputChange}
             />
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>الدكتور</label>
             <input
-              placeholder='enter your service'
+              placeholder='اختر الدكتور  '
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
+              name='doctor'
+              onChange={handleInputChange}
             />
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>الرسالة</label>
             <input
-              placeholder='enter your service'
+              placeholder='اكتب الرساله'
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
+              name='message'
+              onChange={handleInputChange}
             />
           </div>
-          <button className='bg-secondary text-white p-3 rounded-3xl w-full font-bold'>
-            حجز موعد
+          <button
+            type='submit'
+            disabled={loading}
+            className='text-white rounded-xl bg-secondary py-2 px-4 font-semibold'
+          >
+            حجز الان
           </button>
+          {loading && <p>Loading...</p>}
+          {response && <p>Success: {JSON.stringify(response)}</p>}
+          {error && <p>Error: {error.message}</p>}
         </form>
       </div>
     </div>

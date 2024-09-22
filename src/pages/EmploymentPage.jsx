@@ -1,7 +1,24 @@
-import DownloadApp from "../components/Home/DownloadApp";
+import { useState } from 'react';
+import DownloadApp from '../components/Home/DownloadApp';
 
 const EmploymentPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    possition: '',
+  });
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevFormData) => ({
+      ...prevFormData,
+      [name]: value,
+    }));
+  };
 
+  const getFormData = () => {
+    console.log(formData); // Here you could also return the data or do something else with it
+  };
   return (
     <div className='container'>
       <div className='bg-[#F5F5F5] p-5 rounded-3xl flex flex-col justify-center items-center py-14'>
@@ -17,49 +34,58 @@ const EmploymentPage = () => {
             <label htmlFor=''>الاسم</label>
             <input
               className='border-2 border-[#15254B33] rounded-md p-2'
-              placeholder='enter your name'
+              placeholder='ادخل الاسم كامل  '
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
+              name='name'
+              value={formData.name}
+              onChange={handleInputChange}
             />
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>البريد الالكتروني</label>
             <input
-              placeholder='enter your email'
+              placeholder='ادخل البريد الالكتروني'
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
+              name='email'
+              onChange={handleInputChange}
             />
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>رقم الجوال</label>
             <input
-              placeholder='enter your phone'
+              placeholder='ادخل رقم الجوال'
               type='text'
-              name='family_name'
-              // onChange={handleInputChange}
+              name='phone'
+              onChange={handleInputChange}
             />
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''>اختر الوظيفة </label>
             <select
-              placeholder='enter your service'
-              type='text'
-              name='family_name'
-              // onChange={handleInputChange}
-            />
+              name='position'
+              value={formData.position}
+              onChange={handleInputChange}
+              className='form-control'
+            >
+              <option value=''>Select your service</option>
+              <option value='manager'>Manager</option>
+              <option value='developer'>Developer</option>
+              <option value='designer'>Designer</option>
+            </select>
           </div>
           <div className='input-holder col-md-6 col-12'>
             <label htmlFor=''> تحميل السيرة الذاتية </label>
-            <select
-              placeholder='enter your service'
-              type='text'
-              name='family_name'
+            <input
+              placeholder='تحميل السيرة الذاتية'
+              type='file'
+              name='cv'
               // onChange={handleInputChange}
             />
           </div>
-          <button className='bg-secondary text-white p-3 rounded-3xl w-full font-bold'>
+          <button
+            className='bg-secondary text-white p-3 rounded-3xl w-full font-bold'
+            onClick={getFormData}
+          >
             حجز موعد
           </button>
         </form>

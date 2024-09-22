@@ -23,10 +23,10 @@ const HomePage = () => {
         </h1>
         <div className='justify-center items-center flex mt-10'>
           <Link
-            to='/articles'
+            to='/departments'
             className='bg-secondary text-white p-4 rounded-full font-bold'
           >
-            تصفح جميع المقالات
+            تصفح جميع الاقسام
           </Link>
         </div>
       </div>

@@ -218,8 +218,8 @@ export const doctorsPage = [
 
 export const activite = [
   {
-    header: 'عنوان الفاعلية',
-    content:
+    title: 'عنوان الفاعلية',
+    description:
       ' نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
     img: activiteImg,
     date: '2022-3-3',
@@ -227,8 +227,28 @@ export const activite = [
     light: true,
   },
   {
-    header: 'عنوان الفاعلية',
-    content:
+    title: 'عنوان الفاعلية',
+    description:
+      'نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
+    img: activiteImg,
+    date: '2023-3-4',
+    href: '',
+    light: true,
+  },
+];
+export const activites = [
+  {
+    title: 'عنوان الفاعلية',
+    description:
+      ' نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
+    img: activiteImg,
+    date: '2022-3-3',
+    href: activiteImg,
+    light: true,
+  },
+  {
+    title: 'عنوان الفاعلية',
+    description:
       'نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
     img: activiteImg,
     date: '2023-3-4',
@@ -236,8 +256,8 @@ export const activite = [
     light: true,
   },
   {
-    header: 'عنوان الفاعلية',
-    content:
+    title: 'عنوان الفاعلية',
+    description:
       ' نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
     img: activiteImg,
     date: '2022-3-3',
@@ -245,8 +265,26 @@ export const activite = [
     light: true,
   },
   {
-    header: 'عنوان الفاعلية',
-    content:
+    title: 'عنوان الفاعلية',
+    description:
+      'نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
+    img: activiteImg,
+    date: '2023-3-4',
+    href: '',
+    light: true,
+  },
+  {
+    title: 'عنوان الفاعلية',
+    description:
+      ' نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
+    img: activiteImg,
+    date: '2022-3-3',
+    href: activiteImg,
+    light: true,
+  },
+  {
+    title: 'عنوان الفاعلية',
+    description:
       'نيو كلينيك خبراء الرعاية الصحية المنزلية، نوفر لك مناخ ملائم للرعاية الصحية الأمنة',
     img: activiteImg,
     date: '2023-3-4',

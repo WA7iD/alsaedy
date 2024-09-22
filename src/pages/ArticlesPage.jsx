@@ -7,7 +7,8 @@ import DownloadApp from '../components/Home/DownloadApp';
 import useGetData from '../Hooks/useGetData';
 
 const ArticlesPage = () => {
-  const { data, loading, error } = useGetData('/articles');
+  const { data, loading, error } = useGetData('/blogs');
+  console.log(data);
 
   return (
     <section className='container'>
@@ -19,7 +20,7 @@ const ArticlesPage = () => {
           title={'أحدث المقالات'}
         />
         <div className='flex flex-col justify-between  gap-10'>
-          {articles.map((article, index) => (
+          {data?.data?.data?.map((article, index) => (
             <ArticleCard key={index} {...article} pagecard />
           ))}
         </div>

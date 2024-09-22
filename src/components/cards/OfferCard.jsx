@@ -3,11 +3,19 @@ import { Link } from 'react-router-dom';
 import { icons } from '../../constant';
 import { FaArrowLeft } from 'react-icons/fa';
 
-function OfferCard({ image, title, description, price, previousPrice, key }) {
+function OfferCard({
+  images,
+  title,
+  description,
+  price,
+  price_after_discount,
+  key,
+}) {
+  const imageUrl = images[0]?.url;
   return (
     <div key={key} className='bg-[#F5F5F5] rounded-t-3xl overflow-hidden'>
       <div className='w-full overflow-hidden'>
-        <img src={image} alt='' className='w-full bg-cover' />
+        <img src={imageUrl} alt='' className='w-full bg-cover' />
       </div>
       <div className='p-6'>
         <h1 className='text-2xl text-primary my-4'> {title}</h1>
@@ -16,7 +24,7 @@ function OfferCard({ image, title, description, price, previousPrice, key }) {
           <div className=''>
             <p className='text-secondary text-xl mb-2'> {price} ريال سعودي </p>
             <p className='text-primary/40 underline italic'>
-              {previousPrice} ريال سعودي
+              {price_after_discount} ريال سعودي
             </p>
           </div>
           <Link

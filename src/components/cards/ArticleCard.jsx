@@ -2,7 +2,16 @@ import React from 'react';
 import { icons } from '../../constant';
 import { Link } from 'react-router-dom';
 
-function ArticleCard({ image, title, day, description, month, key, pagecard }) {
+function ArticleCard({ image, title, description, key, pagecard, created_at }) {
+  let timestamp = created_at;
+  let date = new Date(timestamp);
+  let day = date.getDate();
+  let monthInArabic = date.toLocaleString('ar-EG', { month: 'long' });
+
+  let year = date.getFullYear();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
   return (
     <>
       {pagecard ? (
@@ -21,7 +30,7 @@ function ArticleCard({ image, title, day, description, month, key, pagecard }) {
               className='w-full h-full object-cover'
             />
           </div>
-          <p className='text-secondary'>November 05, 2021</p>
+          <p className='text-secondary'>{day}</p>
           <h2 className='text-2xl text-primary mb-4'>{title} </h2>
         </Link>
       ) : (
@@ -36,7 +45,9 @@ function ArticleCard({ image, title, day, description, month, key, pagecard }) {
             <div className='flex flex-col justify-between items-center gap-2'>
               <img src={icons.calender} alt='' />
               <p className='text-primary font-extrabold text-2xl'>{day}</p>
-              <p className='text-primary font-extrabold text-2xl'>{month}</p>
+              <p className='text-primary font-extrabold text-2xl'>
+                {monthInArabic}
+              </p>
             </div>
             <div>
               <h2 className='text-2xl text-primary mb-4'>{title} </h2>
